@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            background-color: #ddddff;
+            border: 1px solid #999;
+            padding: 10px;
+            width: 430px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 2px;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            text-align: right;
+            width: 120px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            width: 175px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 35px;
+            resize: vertical;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form action="processData.php" method="POST">
+        <fieldset>
+            <legend>Person Details</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="surname">Surname</label>
+                    </td>
+                    <td>
+                        <input type="text" id="surname" name="surname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email address</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Street Address</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">State</label>
+                    </td>
+                    <td>
+                        <select id="state" name="state">
+                            <option value="">Choose your state</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="WA">Western Australia</option>
+                            <option value="SA">South Australia</option>
+                            <option value="TAS">Tasmania</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" name="country" value="Australia">
+                    </td>
+                    <td>
+                        <label>Gender:</label>
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Vegetarian?</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="vegetarian" value="Yes">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
